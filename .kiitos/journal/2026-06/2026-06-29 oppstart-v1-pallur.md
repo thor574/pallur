@@ -58,3 +58,34 @@ Kostnadstall var ikke tilgjengelige i denne Codex-sesjonen. Feltet må oppdatere
 hvis Pallur skal føre konkret økonomisporing for analyse, design, implementasjon eller
 dokumentasjon.
 
+
+
+# KI-instruks 3
+> Les CODEX_START_PALLUR_KI_PLATTFORM.txt i sin helhet og utfør første oppdrag i filen.
+>
+> (Dette var beskjeden fra din kollega ChatGPT 5.5 (Høy) når jeg ba den sammenfatte vår tråd der, så vi kunne fortsette her, og det blir enklere for meg, fordi du kan lage filer og vedlikeholde dem over tid, pluss fagfellevurderingen jeg gjør av arbeidet ditt er enklere her).
+
+## Problem: Første leveranse for lokal KI-plattform
+
+`CODEX_START_PALLUR_KI_PLATTFORM.txt` ble lest i sin helhet. Oppdraget ble gjennomført
+primært i Pallur. Kiitos ble bare lest for å forstå senere pilot og ble ikke endret.
+
+### Endringer utført
+
+- `README.md` ble oppdatert med lenke til lokal KI-plattform.
+- `docs/ki-plattform/README.md` ble opprettet som inngangsside med mål, avgrensning,
+  arkitektur, sikkerhetsprinsipper, Pallur/Kiitos-skille og veikart.
+- `docs/ki-plattform/dokumentasjonsplan.md` ble opprettet med orientering, første
+  leveranse, senere sider, primærkilder og arbeidsgiveravklaringer.
+- `docs/ki-plattform/beslutningslogg.md` ble opprettet med første beslutninger og åpne
+  beslutningspunkter.
+- `docs/ki-plattform/eksperimentmal.md` ble opprettet som mal for repeterbare målinger.
+
+### Status
+
+Første leveranse er gjennomført som dokumentasjon og plan. Ingen programvare ble installert,
+ingen endringer ble gjort i `kiitos`, og ingen commit eller push ble utført.
+
+### Kostnader
+
+Kostnadstall var ikke tilgjengelige i denne Codex-sesjonen.
