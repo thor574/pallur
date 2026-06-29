@@ -89,3 +89,31 @@ ingen endringer ble gjort i `kiitos`, og ingen commit eller push ble utført.
 ### Kostnader
 
 Kostnadstall var ikke tilgjengelige i denne Codex-sesjonen.
+
+
+
+# KI-instruks 4
+> Nydelig.
+>
+> Kanskje vi nå kan slette CODEX_START*.txt filen.
+> Er det tydelig hva neste steg er?
+>
+> Journalfør og commit.
+
+## Problem: Opprydding etter overleveringsfil
+
+Overleveringsfilen `CODEX_START_PALLUR_KI_PLATTFORM.txt` var ferdig brukt og var tracked
+i siste commit. Den ble derfor slettet fra Pallur.
+
+### Status
+
+Neste steg er tydelig i `docs/ki-plattform/dokumentasjonsplan.md`: lag siden
+`lm-studio.md` med kontrollert, versjonsdatert dokumentasjon av LM Studio sin rolle,
+installasjonsavklaringer, modellkort/lisens/GGUF-vurdering og kontroll av lokal server
+og modell-ID.
+
+Arbeidet journalføres og committes i Pallur.
+
+### Kostnader
+
+Kostnadstall var ikke tilgjengelige i denne Codex-sesjonen.
