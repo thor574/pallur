@@ -38,9 +38,20 @@ Prosjektet skal beskrive:
 
 - Prosjektnær dokumentasjon ligger i `docs/`.
 - Prosjektjournal ligger i `.kiitos/journal/`.
-- Eksempelkonfigurasjon kan ligge i `examples/` når den ikke er hemmelig.
-- Hemmeligheter, API-nøkler, tokens, auth-filer og maskinspesifikke private notater skal
-  ikke sjekkes inn.
+- Eksempelkonfigurasjon kan ligge i `examples/` når den ikke er sensitiv.
+
+### Offentlig prosjekt – hva som ikke må sjekkes inn
+
+Pallur er et offentlig Git-repositorium. Ingen av følgende må lagres her:
+
+- Passord, API-nøkler, tokens, sertifikater eller hemmeligheter av noe slag
+- Personlige IP-adresser, MAC-adresser eller nettverkstopologi
+- Interne brukernavn, servernavn, FQDN-er eller database-tilkoblingsstrenger
+- Organisasjonsinterne systemnavn eller kodenavn som ikke er offentlige
+- Personopplysninger utover det som er åpent tilgjengelig
+- Maskinkonfigurasjon som avslører sårbarhet eller intern infrastruktur
+
+Bruk plassholdere (`<API_KEY>`, `<HOSTNAME>`, o.l.) eller refer til ekstern hemmelighetslagring hvis du er usikker.
 
 ## Arbeidsregler
 
