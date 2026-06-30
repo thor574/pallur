@@ -59,6 +59,17 @@ Selve KI-modellen som kjøres. Valget avgjøres av maskinens VRAM og RAM, lisens
 | MoE-arkitektur | Mixture of Experts: stor total, men få aktive parametere per pass — rask inferanse. |
 | Lisens | Avgjør om modellen kan brukes kommersielt, på jobb-PC og i hvilke kontekster. |
 
+**GGUF-format**
+Når du søker etter modeller på Hugging Face eller i LM Studio, vil du se filendelsen `.gguf`. GGUF
+(GPT-Generated Unified Format) er et filformat for kvantiserte modeller utviklet av llama.cpp-prosjektet.
+Det er i praksis blitt standarden for å kjøre åpne modeller lokalt: én enkelt fil som inneholder
+både modellvektene og all nødvendig metadata. LM Studio, Ollama og llama.cpp kan alle laste GGUF-filer direkte.
+Se [termer.md](termer.md) for ordforklaringer.
+
+**Hvor finner man modeller?**
+- [Hugging Face](https://huggingface.co) — det største åpne modellbiblioteket. Søk etter GGUF-varianter og les modelkortet for lisens, proveniens og kvantiseringsalternativer.
+- LM Studio sin innebygde modellvisning — henter fra Hugging Face, men viser minneindikator for maskinen din direkte.
+
 Se [lm-studio.md](lm-studio.md) for modellene som er tilgjengelige lokalt.
 
 ### Lag 3 — Indeksering og konteksthenting (RAG)
@@ -83,17 +94,31 @@ Ved spørsmål:
 
 Uten dette laget vil en lokal 9B-modell på 4 GB VRAM være for treg ved lange arbeidsøkter.
 
-### Lag 4 — Brukerflate og agentharness
+**Merk — VS Code har innebygget semantisk indeksering:**
+VS Code indekserer arbeidsrommet ditt løpende og tilbyr et `semantic_search`-verktøy internt.
+GitHub Copilot får bruke denne indekseringen direkte, og slipper derfor å bygge sin egen
+vektordatabase. For lokale KI-modeller er denne indekseringen ikke tilgjengelig — den er
+intern i VS Code og ikke eksponert som et åpent API. Derfor må vi bygge et tilsvarende
+lag selv med embedding-modell og vektordatabase.
+
+### Lag 4 — Brukerflate og agentsele (eng: harness)
 
 Det du faktisk bruker: der du skriver spørsmål, ser svar og lar agenten gjøre endringer.
+Se [termer.md](termer.md) for forklaring av begrepet agentsele.
 
 | Kandidat | Type | Merknad |
 |---|---|---|
 | **Cline** | VS Code-utvidelse | Chat + agent, lese/skrive filer, committe, åpen kildekode |
 | **Roo Code** | VS Code-utvidelse | Fork av Cline med ekstra funksjoner |
-| **Continue** | VS Code-utvidelse | Chat + autocomplete, v1 stabil, v2-status uklar |
+| **Continue** | VS Code-utvidelse | Utvikling i praksis stoppet — se under |
 | **Pi Coding Agent** | Terminal | Kjenner `AGENTS.md`, OpenAI-kompatibel, krever bash på Windows |
 | **GitHub Copilot** | VS Code / sky | Referansepunkt — lukket, skybasert, god opplevelse |
+
+**Om Continue.dev (oppdatert 2026-06-30):**
+Continue.dev er ikke lenger aktivt vedlikeholdt. Hovedutvikleren ble ansatt i Cursor og
+arbeider ikke videre med Continue. Prosjektet eksisterer fortsatt og v1 kan brukes, men
+bør ikke velges som langsiktig plattform uten at ny vedlikeholder trer til. Cline og
+Roo Code er per nå mer aktive alternativer.
 
 Alle kan konfigureres mot LM Studio sin lokale server som backend.
 
