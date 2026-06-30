@@ -16,6 +16,5 @@ endres etter hvert som verktøy, modeller og arbeidsmåter modnes.
 ## Status
 
 - `v0.1` er dokumentert som en tidligere mulighet basert på eksisterende kiitos-ruff-notater.
-- `v1` er et foreslått prøvespor basert på LM Studio som lokal modellvert og Pi som agentharness.
-- Begge sporene må måles på faktisk maskin før Pallur kan si hva som er anbefalt normaloppsett.
-- Første leveranse for lokal KI-plattform ligger i `docs/ki-plattform/`.
+- `v1` er testet med LM Studio + Qwen3.6-35B-A3B. Ytelsen er for lav for daglig bruk på 4 GB VRAM.
+- **Prosjektet er parkert per 2026-06-30.** Se [praktiske funn](docs/ki-plattform/README.md) og [beslutningslogg](docs/ki-plattform/beslutningslogg.md) for detaljer og betingelser for gjenopptak.

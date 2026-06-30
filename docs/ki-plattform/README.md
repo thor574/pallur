@@ -3,9 +3,38 @@
 Dette er inngangssiden for Pallurs dokumentasjon av en lokal, privat og kontrollerbar
 KI-plattform for programvareutvikling.
 
-Status per 2026-06-29: Dette er et prøvespor. Dokumentasjonen beskriver ønsket retning,
-avgrensninger og måleopplegg. Den dokumenterer ikke at LM Studio, Pi eller nye modeller er
-installert eller godkjent på jobb-PC.
+**Status per 2026-06-30: Parkert.** Praktisk testing er gjennomført. Konklusjonen er at
+4 GB VRAM ikke gir tilstrekkelig ytelse for daglig bruk. Prosjektet gjenopptas ved endrede
+forutsetninger — se «Betingelser for gjenopptak» under.
+
+## Praktiske funn (testet 2026-06-30)
+
+Testing med LM Studio, Qwen3.6-35B-A3B og Qwythos-9B på maskin med 4 GB VRAM og 64 GB RAM.
+
+**Ytelse:**
+- Qwen3.6-35B-A3B (MoE, 4 GB VRAM + resten i RAM): ca. 3–5 tokens/sek
+- Samme oppgave i Claude Sonnet 4.6: 4–10 ganger raskere ved fil-lesing, tenking og vurdering
+- Q4-kvantiserte modeller: testet lite, inntrykket er dårligere kvalitet enn forventet
+
+**Verktøy:**
+- Continue v2.0.0 (da kjørt): klarte ikke å bruke VS Codes innebygde `semantic_search`
+- Continue er kjøpt opp av Cursor og har slått av indekserings-tjenesten
+- Ingen andre utvidelser fanget opp VS Codes innebygde workspace-indeksering
+- GitHub Copilot kan indeksere via Microsofts servere; uklart om dette var aktivt under testen
+
+**Konklusjon:**
+- Lokal KI på 4 GB VRAM er teknisk mulig, men for tregt for praktisk daglig bruk
+- Frontier-modeller (Claude, GPT) gir bedre tid/kvalitet-ratio på nåværende maskinvare
+- Qwen-familien (kinesisk) imponerer: Qwen3.6-35B-A3B er veldig god ved høy nok VRAM
+- Indeksering/embedding er viktig for rask utførelse, men ikke løst lokalt i denne runden
+
+## Betingelser for gjenopptak
+
+1. **Embedding-test:** Har embedding/RAG merkbar effekt på ytelse? Lav forventning.
+2. **Mer VRAM:** 16 GB VRAM ville gitt rom for full GPU-inferanse på en 9B Q4-modell.
+   Forventes ikke med nåværende priser.
+3. **Mindre modeller:** Hvis gode modeller får plass i < 4 GB VRAM, prøv igjen.
+   Forventes ikke i nær fremtid.
 
 ## Brukermål (dokumentert 2026-06-30)
 

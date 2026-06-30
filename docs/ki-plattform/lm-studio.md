@@ -5,6 +5,7 @@ OpenAI-kompatibel API-server og gir grafisk kontroll over GPU-avlasting, konteks
 og inferanseparametere.
 
 Kildet fra offentlig LM Studio-dokumentasjon og lokal serverkontroll 2026-06-30.
+Versjon brukt under testing: **LM Studio 0.4.18 (Build 1)**.
 
 ## Rolle i arkitekturen
 
@@ -48,8 +49,10 @@ Qwythos er en community-modell bygget på Qwen3.5-9B og tilpasset Mythos 5-spori
 Modellen annonserer Vision, Tool-use og Reasoning, og støtter opptil 1 048 576 tokens
 kontekstvindu.
 
-**Lisens og proveniens:** Må avklares mot modelkortet på Hugging Face før fast bruk.
-GGUF-utgiver skal noteres når modellen er lastet ned.
+**Lisens og proveniens:** Apache-lisens. GGUF-utgiver: empero-ai (Hugging Face).
+
+**Testresultat (2026-06-30):** Q4-varianten gikk i surr sammenlignet med Qwen3.6-35B-A3B.
+Ikke anbefalt som primærmodell på denne maskinen.
 
 ### Qwen3.6-35B-A3B
 
@@ -61,7 +64,8 @@ token-pass, selv om totalmodellen er 35B. Dette gir:
 - Krav om at alle lag (35B) ligger i RAM eller VRAM
 
 For denne maskinen (4 GB VRAM, 64 GB RAM): modellen lastes i RAM med eventuell delvis
-GPU-avlasting. Verdt å sammenligne mot Qwythos Q4 på samme testoppgave.
+GPU-avlasting. Beste lokale modell testet på denne maskinen — Qwythos Q4 gikk i surr
+sammenlignet med denne.
 
 ## Maskinvarebudsjett
 
@@ -77,15 +81,27 @@ Nøkkeltall for modellasting:
 
 ### Praktisk ytelsesgrense — målt 2026-06-30
 
-Forsøk med Qwythos-9B Q4 og kontekststørrelser opp mot 101 K tokens viste at responshastigheten
-er for lav for praktisk iterativt arbeid uten embedding-støtte.
+Testing med Qwen3.6-35B-A3B (MoE, 4 GB VRAM + resten i RAM) og mindre modeller som
+passer helt i 4 GB VRAM.
 
-**Funn:** 4 GB VRAM er ikke tilstrekkelig for å kjøre en 9B-modell med akseptabel hastighet
-når konteksten vokser. Mesteparten av inferansen faller tilbake på CPU og RAM.
+**Målt ytelse:**
 
-**Estimert VRAM-behov for ok ytelse uten embedding:** ca. 16 GB VRAM ville gitt rom for
-full GPU-inferanse på en 9B Q4-modell med romslig KV-cache. Med 4 GB VRAM er
-embedding + RAG den realistiske veien til brukbar ytelse på denne maskinen.
+| Modelltype | Ytelse | Kvalitet | Egnet for kodevedlikehold? |
+|---|---|---|---|
+| Qwen3.6-35B-A3B (MoE, RAM-inferanse) | ~3–5 tokens/sek | God, med resonnement | Nei — for tregt |
+| Modeller som passer i 4 GB VRAM (Q4) | ~12 tokens/sek | Svak, ingen resonnement | **Nei — utelukket** |
+
+**Funn om 4 GB VRAM-modeller (Q4, ~7B):**
+Raskere enn MoE-varianten (12 vs. 3–5 tokens/sek), men gir ikke gode svar. Disse modellene
+mangler resonneringsevne og egner seg bare for raske, enkle svar — ikke for kodevedlikehold
+som krever grundig fil-lesing og vurdering. Utelukket for dette formålet.
+
+**Konklusjon:** Verken de raske (Q4/4 GB) eller de gode (35B MoE) lokale modellene gir
+tilfredsstillende resultat på nåværende maskinvare. Sammenlignet med Claude Sonnet 4.6:
+4–10 ganger tregere, og svakere resonneringsevne.
+
+**Estimert VRAM-behov for ok ytelse:** ca. 16 GB VRAM ville gitt rom for full
+GPU-inferanse på en 9B Q4-modell med resonnement. Prosjektet er parkert.
 
 ## Konfigurasjonsanbefalinger
 
