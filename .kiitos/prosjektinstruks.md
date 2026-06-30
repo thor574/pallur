@@ -60,3 +60,4 @@ Bruk plassholdere (`<API_KEY>`, `<HOSTNAME>`, o.l.) eller refer til ekstern hemm
 - Oppgi kilder når produktdokumentasjon eller eksterne verktøy beskrives.
 - Ikke anta at modellnavn, endepunkter eller CLI-flagg er stabile uten å kontrollere dem.
 - Bevar `æ`, `ø` og `å` i dokumentasjonen.
+- Hold journaler korte og lesbare: ikke ta med lokale miljødump, brukernavn, tidsone eller andre maskindetaljer når de ikke er relevante for saken.

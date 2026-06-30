@@ -1,23 +1,13 @@
 # KI-instruks 1
-> # AGENTS.md instructions
->
-> <INSTRUCTIONS>
 > Bruk kiitos som styringsgrunnlag. Det er en samling instrukser i tre katalogtrær. Gi beskjed hvis du ikke finner dem.
-> </INSTRUCTIONS><environment_context>
->   <cwd>C:\Users\thor.hovden\JottaData\pallur</cwd>
->   <shell>powershell</shell>
->   <current_date>2026-06-29</current_date>
->   <timezone>Europe/Oslo</timezone>
->   <filesystem><workspace_roots><root>C:\Users\thor.hovden\JottaData\pallur</root></workspace_roots><permission_profile type="managed"><file_system type="restricted"><entry access="read"><special>:root</special></entry><entry access="write"><path>C:\Users\thor.hovden\JottaData\pallur</path></entry><entry access="write"><special>:slash_tmp</special></entry><entry access="write"><special>:tmpdir</special></entry><entry access="read"><path>C:\Users\thor.hovden\JottaData\pallur\.git</path></entry><entry access="read"><path>C:\Users\thor.hovden\JottaData\pallur\.agents</path></entry><entry access="read"><path>C:\Users\thor.hovden\JottaData\pallur\.codex</path></entry></file_system></permission_profile></filesystem>
-> </environment_context>
 
 Kiitos-flaten ble funnet ved siden av prosjektet:
 
-- `kiitos.fyr`
-- `kiitos.laug.th`
-- `kiitos.ruff.th`
+- kiitos.fyr
+- kiitos.laug.th
+- kiitos.ruff.th
 
-`kiitos.arkiv` finnes også, men ble ikke brukt som aktiv instruksflate.
+kiitos.arkiv finnes også, men ble ikke brukt som aktiv instruksflate.
 
 
 
