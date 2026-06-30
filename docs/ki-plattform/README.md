@@ -110,15 +110,15 @@ Se [termer.md](termer.md) for forklaring av begrepet agentsele.
 |---|---|---|
 | **Cline** | VS Code-utvidelse | Chat + agent, lese/skrive filer, committe, åpen kildekode |
 | **Roo Code** | VS Code-utvidelse | Fork av Cline med ekstra funksjoner |
-| **Continue** | VS Code-utvidelse | Utvikling i praksis stoppet — se under |
+| **Continue** | VS Code-utvidelse | v2.0.0 tilgjengelig — se under |
 | **Pi Coding Agent** | Terminal | Kjenner `AGENTS.md`, OpenAI-kompatibel, krever bash på Windows |
 | **GitHub Copilot** | VS Code / sky | Referansepunkt — lukket, skybasert, god opplevelse |
 
 **Om Continue.dev (oppdatert 2026-06-30):**
-Continue.dev er ikke lenger aktivt vedlikeholdt. Hovedutvikleren ble ansatt i Cursor og
-arbeider ikke videre med Continue. Prosjektet eksisterer fortsatt og v1 kan brukes, men
-bør ikke velges som langsiktig plattform uten at ny vedlikeholder trer til. Cline og
-Roo Code er per nå mer aktive alternativer.
+Continue.dev er nå i v2.0.0. Bakgrunnshistorikken er uklar — det har vært snakk om at
+hovedpersoner er blitt ansatt i Cursor, men prosjektet er tydelig i aktiv utvikling.
+Status og vedlikeholdssituasjon bør verifiseres mot [continue.dev](https://continue.dev)
+før valg av Continue som plattform.
 
 Alle kan konfigureres mot LM Studio sin lokale server som backend.
 
