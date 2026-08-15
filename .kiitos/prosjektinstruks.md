@@ -3,18 +3,11 @@
 Pallur dokumenterer KI-plattformen Thor bruker for agentarbeid, lokale modeller,
 modellverter, IDE-integrasjon og kiitos-styring.
 
-## Kiitos-flate
+## Instruksomfang
 
-Når dette prosjektet åpnes som eget arbeidsrom, bruk denne leserekkefølgen:
-
-1. `../kiitos.fyr/velkommen.md`
-2. `../kiitos.laug.th/velkommen.md`
-3. `../kiitos.ruff.th/velkommen.md`
-4. `../kiitos.ruff.th/.github/copilot-kiitos-pref.md`
-5. denne filen
-
-Hvis katalogene ikke finnes ved siden av prosjektet, si tydelig fra før du gjør
-prosjektnære vurderinger.
+- Denne fila eier Pallurs lokale fakta, kilder, grenser og arbeidsregler.
+- Felles Kiitos-regler lastes fra det aktive arbeidsrommet og gjentas ikke her.
+- `AGENTS.md` i prosjektroten er inngangen ved direkte prosjektstart. Hvis felles Kiitos-kontekst ikke er tilgjengelig, kan lokalt arbeid fortsette, men manglende kontekst skal opplyses før tverrprosjektlige eller laugsovergripende vurderinger.
 
 ## Formål
 

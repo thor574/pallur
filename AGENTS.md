@@ -1,10 +1,12 @@
-# AGENTS.md
+# AGENTS.md (pallur)
 
-Bruk kiitos som styringsgrunnlag.
+Denne fila gjelder hele prosjektet.
 
-Operativ inngang for dette prosjektet:
+Før arbeid:
 
 1. Les `.kiitos/prosjektinstruks.md`.
-2. Følg kiitos-flaten den peker til: `kiitos.fyr`, `kiitos.laug.th` og `kiitos.ruff.th`.
-3. Gi beskjed hvis disse kiitos-trærne ikke finnes eller ikke er lesbare.
+2. Les relevante lokale kilder som prosjektinstruksen peker til.
+3. Bruk felles Kiitos-kontekst fra det aktive arbeidsrommet når den er tilgjengelig.
+4. Hvis felles Kiitos-kontekst mangler, kan prosjektnært arbeid fortsette. Opplys om mangelen før tverrprosjektlige eller laugsovergripende vurderinger.
 
+Denne fila er bare en inngangsportal. Prosjektinstruksen eier prosjektets fakta, grenser og arbeidsregler.

@@ -3,6 +3,8 @@
 Pallur er en beskrivelse av min KI-plattform for arbeid med agenter, lokale modeller,
 utviklingsverktøy og kiitos-styring.
 
+> Prosjektets KI- og arbeidsinstruks: [`.kiitos/prosjektinstruks.md`](.kiitos/prosjektinstruks.md).
+
 Navnet er islandsk for plattform. Prosjektet starter som `v1 pallur`, men skal kunne
 endres etter hvert som verktøy, modeller og arbeidsmåter modnes.
 
