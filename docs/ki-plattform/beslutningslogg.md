@@ -12,6 +12,9 @@ Denne loggen skiller beslutninger fra hypoteser og åpne spørsmål. Nye beslutn
 | PALLUR-ADR-0004 | 2026-06-29 | Første dokumentasjonsstruktur legges under `docs/ki-plattform/` | Besluttet | Eksisterende `docs/` er enkel og bør ikke flyttes unødvendig | Ny inngang får samlet lokal-KI-stoff uten å bryte gamle lenker |
 | PALLUR-ADR-0005 | 2026-06-29 | Ingen installasjon, commit, push eller praktisk Pi-pilot uten eksplisitt beskjed | Besluttet | Jobb-PC og agentverktøy krever kontroll | Første leveranse er dokumentasjon og plan, ikke maskinendring |
 | PALLUR-ADR-0006 | 2026-06-30 | Embedding + RAG er nødvendig strategi på nåværende maskinvare | Besluttet | 4 GB VRAM gir for lav inferansehastighet uten embedding-støtte ved reelle kontekststørrelser | `nomic-embed-text-v1.5` aktiveres som primær kontekststrategi; ren LLM-inferanse krever ~16 GB VRAM |
+| PALLUR-ADR-0007 | 2026-08-18 | Agentharness kan undersøkes uavhengig av det parkerte lokal-KI-sporet | Besluttet | Nytten av agentarbeidsflyt avhenger ikke av at modellen kjører lokalt | Pallur kan gjøre små harness-eksperimenter med rimelige agenter uten å gjenåpne lokal inferanse |
+| PALLUR-ADR-0008 | 2026-08-18 | Sprytix-læringen deles denne gangen i `RIMELIG KI` og `BEDRE KI (> Opus 5)` | Besluttet | Dagens rimelige agenter bør bare få enkle, kontrollerbare arbeidsmønstre; mer autonom orkestrering kan vente | Worktrees og separat kontrollagent er aktuelle nå; agentflåter, knowledge graph og autonomt persistent minne parkeres |
+| PALLUR-ADR-0009 | 2026-08-18 | Første aktuelle fleragentforsøk begrenses til to roller, separate worktrees og menneskelig diff-godkjenning | Besluttet | Minste reversible forsøk kan måle kvalitetsgevinst uten omfattende plattformbygging | Ingen automatisk merge, commit eller push; forsøket gjennomføres bare på en liten, ufarlig oppgave |
 
 ## Åpne beslutninger
 
@@ -22,4 +25,5 @@ Denne loggen skiller beslutninger fra hypoteser og åpne spørsmål. Nye beslutn
 | Jobb-PC | Kan verktøyene brukes på arbeidsgiver-PC? | Arbeidsgivergodkjenning |
 | Kiitos-pilot | Hva er første ufarlige oppgave mot `kiitos`? | Ren status, grenvalg og eksplisitt beskjed |
 | Privat PC | Hvilke maskinvarekrav er reelle? | Besvart: 16 GB VRAM for ren LLM-inferanse; 4 GB VRAM krever embedding + RAG (PALLUR-ADR-0006) |
+| To-agentforsøk | Gir separat kontrollagent målbar kvalitetsgevinst med rimelige agenter? | Ett lite forsøk etter planen i `agentarbeid.md` |
 
